@@ -28,6 +28,11 @@ form input[type="text"] {
     font-size: 1.5rem;
 }
 
+form input[placeholder] {
+    font-size: 1rem;
+    padding-left: 0.5rem;
+}
+
 form input[type="submit"] {
     width: 29%;
     height: 2rem;
@@ -37,6 +42,10 @@ form input[type="submit"] {
     outline: none;
     border: none;
     border-radius: 3px;
+}
+
+form input[type="submit"]:hover {
+    background-color: #008539;
 }
 
 ul {
@@ -52,15 +61,16 @@ ul li {
     align-items: center;
     margin-bottom: 0.5rem;
     height: 3rem;
+    border-bottom: 1px solid gray;
 }
 
 ul li input:not([readonly]) {
     appearance: none;
     outline: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 70%;
-    height: 100%;
+    height: 70%;
     background-color: burlywood;
 }
 
@@ -68,9 +78,9 @@ ul li input:read-only {
     appearance: none;
     outline: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     width: 70%;
-    height: 100%;
+    height: 70%;
     cursor: default;
 }
 
@@ -79,30 +89,59 @@ ul li input:read-only {
     height: 100%;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .edit-btn {
-    display:block;
+    display: block;
     color: #fff;
     background-color: dodgerblue;
     cursor: pointer;
     width: 45%;
-    height: 100%;
+    height: 70%;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     border-radius: 5px;
     font-weight: bold;
 }
 
+.edit-btn:hover {
+    background-color: #0077ee;
+}
+
 .delete-btn {
-    display:block;
+    display: block;
     color: #fff;
     background-color: crimson;
     cursor: pointer;
     width: 45%;
-    height: 100%;
+    height: 70%;
     text-align: center;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
     border-radius: 5px;
     font-weight: bold;
+}
+
+.delete-btn:hover {
+    background-color: #dd001d;
+}
+
+@media screen and (max-width: 600px) {
+    form {
+        width: 98vw;
+    }
+
+    ul {
+        width: 98vw;
+    }
+
+    .edit-btn {
+        font-size: 0.9em;
+        font-weight: normal;
+    }
+
+    .delete-btn {
+        font-size: 0.9em;
+        font-weight: normal;
+    }
 }
